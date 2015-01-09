@@ -1,0 +1,9 @@
+Hi
+
+<% @name.each do |f| %>
+
+<li><%= link_to f.name, creature_path(f.id) %></li>
+
+<% end %>
+
+<a href="/creatures/new">Add Creature</a>
