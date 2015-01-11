@@ -1,9 +1,20 @@
-Hi
+<div class="extra">
+  <div class="row">
+    <div class="col-lg-12 text-center">
+      <h2>The Creatures</h2>
+      <hr class="star-light">
+    </div>
+  </div>
 
-<% @name.each do |f| %>
+  <% @name.each do |f| %>
 
-<li><%= link_to f.name, creature_path(f.id) %></li>
+  <p><%= link_to f.name, creature_path(f.id) %></p>
 
-<% end %>
+  <% end %>
 
-<a href="/creatures/new">Add Creature</a>
+</br>
+
+<%= link_to 'Add a Creature', new_creature_path, :class => "btn btn-primary" %>
+
+</div>
+
