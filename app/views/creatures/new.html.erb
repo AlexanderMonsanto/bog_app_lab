@@ -1,11 +1,12 @@
 <div class="extra">
   <h1>Create Creature</h1>
-
+  <div class="form">
   <%= form_for @creature do |f| %>
     <%= f.text_field :name, placeholder: "Enter Creature Name" %>
     <%= f.text_field :desc, placeholder: "Enter Description" %>
     <%= f.submit "Create" %>
   <% end %>
+</div>
 </div>
 
 
