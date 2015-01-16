@@ -6,6 +6,8 @@
     </div>
   </div>
 
+  <%= render :partial => "creatures/partials/flash" %>
+
   <% @name.each do |f| %>
 
   <p><%= link_to f.name, creature_path(f.id) %></p>

@@ -6,7 +6,14 @@ Rails.application.routes.draw do
   root 'home#home'
 
   resources :creatures #, except: [:update, :destroy]
-  get '*path' => redirect('/404.html')
+
+  resources :tags
+
+
+  get "creatures/tag/:tag" => "creatures#tag", :as => :creature_tag
+
+   get '*path', to: "application#not_found"
+
 
   # get 'creatures' => 'creatures#index'
   # get 'creatures/new' => 'creatures#new'
